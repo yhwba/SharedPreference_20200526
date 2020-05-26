@@ -3,6 +3,7 @@ package kr.co.yhw.sharedpreference_20200526;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -38,13 +39,18 @@ public class SignUpActivity extends BaseActivity {
 //                @ 를 포함 + 6글자 이상 => 이메일로 인정
                 if (input.contains("@") && input.length() >= 6){
                     binding.emailCheckResultTxt.setText("사용해도 좋은 이메일입니다.");
+//                    #2767e3 글씨 색변경
+                    binding.emailCheckResultTxt.setTextColor(Color.parseColor("#2767e3"));
+
                 }
                 else {
                     if(input.length() == 0){
                         binding.emailCheckResultTxt.setText("이메일을 입력해주세요.");
+                        binding.emailCheckResultTxt.setTextColor(Color.parseColor("#a0a0a0"));
                     }
                     else {
                         binding.emailCheckResultTxt.setText("이메일 양식으로 입력해주세요.");
+                        binding.emailCheckResultTxt.setTextColor(Color.RED);
                     }
                 }
             }
