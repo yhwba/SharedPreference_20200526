@@ -191,6 +191,7 @@
                     </LinearLayout>
 
                     <RadioGroup
+                        android:id="@+id/workTypeRadioGroup"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="27dp"
@@ -198,11 +199,13 @@
 
 
                         <RadioButton
+                            android:id="@+id/fullTimeRadioBtn"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="풀타임" />
 
                         <RadioButton
+                            android:id="@+id/partTimeRadioBtn"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="25dp"
@@ -210,6 +213,7 @@
                     </RadioGroup>
 
                     <Button
+                        android:id="@+id/nextBtn"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="56dp"

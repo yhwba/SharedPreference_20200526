@@ -8,6 +8,8 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
+import android.view.View;
+import android.widget.Toast;
 
 import kr.co.yhw.sharedpreference_20200526.databinding.ActivitySignUpBinding;
 
@@ -25,6 +27,29 @@ public class SignUpActivity extends BaseActivity {
 
     @Override
     public void setupEvents() {
+
+        binding.nextBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int clickedRadioId = binding.workTypeRadioGroup.getCheckedRadioButtonId();
+
+                if(clickedRadioId == -1 ){
+                    Toast.makeText(mContext, "아무 항목(근무시간)도 고르지 않았습니다", Toast.LENGTH_SHORT).show();
+                }
+                else {
+                    if (clickedRadioId == R.id.fullTimeRadioBtn){
+                        Toast.makeText(mContext, "풀타임", Toast.LENGTH_SHORT).show();
+                    }
+                    else if (clickedRadioId == R.id.partTimeRadioBtn){
+                        Toast.makeText(mContext, "파트타임", Toast.LENGTH_SHORT).show();
+                    }
+                    else {
+                        Log.d("오류","잘못된선택지");
+                    }
+                }
+            }
+        });
+
 //        비밀번호 확인에 뭐라고 적혀있는지를 타이핑 할때마다 확인
 //         조건에 따라 문구변경
 //           =>한글자도 없다 : 비밀번호 입력해주세요. 글씨색 #A0A0A0
