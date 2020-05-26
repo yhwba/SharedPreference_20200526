@@ -54,7 +54,7 @@ public class SignUpActivity extends BaseActivity {
 //                        binding.passwordCheckResultTxt.setText("비밀번호를 입력해주세요.");
 //                        binding.passwordCheckResultTxt.setTextColor(Color.parseColor("#A0A0A0"));
 //                    }
-//                    else if ( inputCheck.length() < 8){
+//                    else if (inputCheck.length() < 8){
 //                        binding.passwordCheckResultTxt.setText("비밀번호가 너무 짧습니다");
 //                        binding.passwordCheckResultTxt.setTextColor(Color.RED);
 //                    }
